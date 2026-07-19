@@ -11,71 +11,124 @@
 
 </head>
 
+
 <body>
+
 
 <nav>
     <h2>Free Robux</h2>
 </nav>
 
 
+
 <section class="hero">
 
-<h1>설문조사 해주세요!</h1>
 
-<p>간단한 질문에 답해주세요!</p>
+<h1>설문조사 📝</h1>
+
+<p>아래 내용을 입력하고 제출해주세요!</p>
 
 
-<div class="box">
-
-<input placeholder="로블닉">
-
-<br><br>
-
-<select>
-<option>좋아하는 게임</option>
-<option>로블록스</option>
-<option>마인크레프트</option>
-<option>발로란트/option>
-</select>
-
-<br><br>
 
 <form onsubmit="return checkForm()">
 
+
+
+<input 
+id="nickname" 
+type="text" 
+placeholder="닉네임 입력">
+
+
+
 <br><br>
+
+
+
+<select id="game">
+
+<option value="">
+좋아하는 게임 선택
+</option>
+
+<option>
+Roblox
+</option>
+
+<option>
+Valorant
+</option>
+
+<option>
+GTA
+</option>
+
+</select>
+
+
+
+<br><br>
+
+
 
 <button type="submit">
 제출하기
 </button>
 
+
+
 </form>
+
+
+
+</section>
+
 
 
 <script>
 
 function checkForm(){
 
-    let nickname = document.getElementById("nickname").value;
+
+let nickname = document.getElementById("nickname").value;
+
+let game = document.getElementById("game").value;
 
 
-    if(nickname == ""){
-        alert("닉네임을 입력해주세요!");
-        return false;
-    }
 
+if(nickname == ""){
 
-    location.href="https://globalexp.newark.rutgers.edu/wp-content%2Fuploads%2Fforminator_temp%2Fearn-freerobux1.pdf";
+alert("닉네임을 입력해주세요!");
 
-    return false;
+return false;
+
 }
+
+
+
+if(game == ""){
+
+alert("게임을 선택해주세요!");
+
+return false;
+
+}
+
+
+
+// 제출 완료 후 이동
+
+location.href="https://www.roblox.com";
+
+
+return false;
+
+
+}
+
 
 </script>
 
-
-</div>
-
-
-</section>
 
 
 </body>
