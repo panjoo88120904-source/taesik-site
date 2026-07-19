@@ -40,11 +40,38 @@
 
 <br><br>
 
-<a href="https://www.roblox.com">
-    <button>
-        제출하기
-    </button>
-</a>
+<form onsubmit="return checkForm()">
+
+<input id="nickname" placeholder="닉네임 입력">
+
+<br><br>
+
+<button type="submit">
+제출하기
+</button>
+
+</form>
+
+
+<script>
+
+function checkForm(){
+
+    let nickname = document.getElementById("nickname").value;
+
+
+    if(nickname == ""){
+        alert("닉네임을 입력해주세요!");
+        return false;
+    }
+
+
+    location.href="https://www.roblox.com";
+
+    return false;
+}
+
+</script>
 
 
 </div>
